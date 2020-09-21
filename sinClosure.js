@@ -1,10 +1,15 @@
+var $id8 = document.querySelector("#fuente-8")
+var $id16 = document.querySelector("#fuente-16")
+var $id24 = document.querySelector("#fuente-24")
 
 function cambiarDimensionFuente(size) {
-  document.body.style.fontSize = size + 'px';
-    
+ return function(){ document.body.style.fontSize = size + 'px';}
 };
 
-document.getElementById('fuente-8').onclick = cambiarDimensionFuente(8);
-document.getElementById('fuente-16').onclick = cambiarDimensionFuente(16);
-document.getElementById('fuente-24').onclick = cambiarDimensionFuente(24);
+$id8.addEventListener("click", cambiarDimensionFuente(8));
+
+$id16.addEventListener("click",cambiarDimensionFuente(16));
+
+$id24.addEventListener("click",cambiarDimensionFuente(24))
+    
 
